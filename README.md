@@ -6,7 +6,7 @@
 
 ## First Wave
 1. Given a sorted list of numbers & a specified number, write a [binary search](https://www.geeksforgeeks.org/selection-sort/) algorithm; return either the index where the number was found, or `-1` if the number is not in the list.
-2. Given an unsorted list of numbers, refactor your selection sort algorithm into an [insertion sort](https://www.geeksforgeeks.org/insertion-sort/).
+2. Given an unsorted list of numbers, write an [insertion sort](https://www.geeksforgeeks.org/insertion-sort/).
 3. Given an unsorted list of numbers, write a [bubble sort](https://www.geeksforgeeks.org/bubble-sort/) algorithm that returns a sorted version of the list that came in.
 
 ## Second Wave, in no particular order
