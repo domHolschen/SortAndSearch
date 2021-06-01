@@ -65,6 +65,20 @@ public class Main {
         System.out.println("Index for 500 in large array: "+Search.binarySearch(large, 500));
         System.out.println("Index for 5000 in large array: "+Search.binarySearch(large, 5000));
         System.out.println("Index for 9876 in large array: "+Search.binarySearch(large, 9876));
+
+        large = largeBatch().clone();
+        small = smallBatch().clone();
+        expectedLrg = expected(large);
+        expectedSml = expected(small);
+
+        small = Sort.shellSort(small);
+        large = Sort.shellSort(large);
+
+        System.out.println("\n\n-- Shell Sort --");
+        System.out.println("Small: "+arrayToString(small));
+        System.out.println("Expected small: "+arrayToString(expectedSml));
+        System.out.println("Large: "+arrayToString(large));
+        System.out.println("Expected large: "+arrayToString(expectedLrg));
     }
 
     public static int[] largeBatch() {

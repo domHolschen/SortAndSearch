@@ -1,4 +1,5 @@
 package com.company;
+import java.lang.Math;
 
 public class Sort {
     public static int[] selectionSort(int[] input) {
@@ -52,6 +53,27 @@ public class Sort {
                     }
                 }
             }
+        }
+        return output;
+    }
+
+    public static int[] shellSort(int[] input) {
+        int[] output = input.clone();
+        int gap = (int) Math.ceil(output.length/2);
+        while (true) {
+            for (int i=0; i<output.length-gap; i++) {
+                int j=i;
+                while (j>=0) {
+                    if (output[j]>output[j+gap]) {
+                        int middleman = output[j+gap]; // swapping
+                        output[j+gap] = output[j]; // swapping
+                        output[j] = middleman; // swapping
+                    }
+                    j-=gap;
+                }
+            }
+            if (gap == 1) break;
+            gap = (int) Math.ceil(gap/2);
         }
         return output;
     }
